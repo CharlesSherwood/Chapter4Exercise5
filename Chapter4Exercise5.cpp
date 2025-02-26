@@ -15,7 +15,7 @@ then display a message if its underweight,overweight,or in a good range
 #include <iostream>
 using namespace std;
 
-
+//Create Variables for height and weight
 double Weight()
 {
     double weight;
@@ -31,15 +31,16 @@ double Height()
     cin >> height;
     return height;
 }
-
+//Return them to main and calculate 
 int main()
 {
     double weight = Weight();
     double height = Height();
     double BMI = weight * 703 / pow(height, 2);
 
-    cout << setw(63) << fixed << setprecision(1) << "Your BMI Is: " << BMI << endl;
 
+    //Display Results Formatting to middle of screen
+    cout << setw(63) << fixed << setprecision(1) << "Your BMI Is: " << BMI << endl;
     if (BMI < 18.5)
         cout << setw(81) << "You Are Underweight For Your Height Pls Eat"<<endl;
     else if (BMI > 25)
